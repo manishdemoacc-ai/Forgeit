@@ -1,4 +1,4 @@
-import logo from 'figma:asset/19271aaaaca150418a4c41ca5494640694270b99.png';
+import logo from '../../assets/logo.png';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,10 +12,10 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: 'facebook.com' },
-    { name: 'Instagram', href: 'instagram.com' },
-    { name: 'Twitter', href: 'x.com' },
-    { name: 'LinkedIn', href: 'in.linked.com' },
+    { name: 'Facebook', href: 'https://facebook.com' },
+    { name: 'Instagram', href: 'https://instagram.com' },
+    { name: 'Twitter', href: 'https://x.com' },
+    { name: 'LinkedIn', href: 'https://linkedin.com' },
   ];
 
   return (
@@ -29,7 +29,7 @@ export function Footer() {
               Built strong. Built online.
             </p>
             <p className="text-gray-500 text-sm">
-              Helping local businesses establish a strong online presence with simple, 
+              Helping local businesses establish a strong online presence with simple,
               affordable websites and digital solutions.
             </p>
           </div>
@@ -64,6 +64,8 @@ export function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-teal-400 transition-colors"
                   >
                     {link.name}
