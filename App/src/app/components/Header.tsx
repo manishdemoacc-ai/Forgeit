@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from 'figma:asset/19271aaaaca150418a4c41ca5494640694270b99.png';
+import logo from '../../assets/logo.png';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,7 +17,6 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-gray-950/70 backdrop-blur-md border-b border-gray-800/50">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo and Brand */}
           <a href="#hero" className="flex items-center gap-3">
             <img src={logo} alt="Forgeit Logo" className="h-8 sm:h-10 w-auto" />
             <div className="hidden sm:block">
@@ -26,7 +25,6 @@ export function Header() {
             </div>
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
@@ -45,7 +43,6 @@ export function Header() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-gray-300 hover:text-teal-400 transition-colors"
@@ -55,7 +52,6 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-800">
             <div className="flex flex-col gap-4">
